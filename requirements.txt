@@ -3,6 +3,5 @@ streamlit-webrtc==0.45.0
 torch
 torchvision
 opencv-python
-mediapipe==0.10.14
 numpy
 Pillow
