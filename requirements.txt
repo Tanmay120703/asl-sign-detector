@@ -1,8 +1,7 @@
-streamlit
-streamlit-webrtc
+streamlit==1.27.2
+streamlit-webrtc==0.45.0
 torch
 torchvision
 opencv-python
 numpy
 Pillow
-mediapipe==0.10.9
