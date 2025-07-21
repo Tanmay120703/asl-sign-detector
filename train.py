@@ -5,10 +5,10 @@ from tqdm import tqdm
 from model import ASLClassifier
 from utils import get_transforms, load_datasets
 
-# Config
+
 train_dir = 'data/asl_alphabet_train'
 test_dir = 'data/asl_alphabet_test'
-img_size = 128  # Increased for ResNet
+img_size = 128  
 batch_size = 32
 epochs = 10
 lr = 0.001
@@ -25,7 +25,7 @@ criterion = nn.CrossEntropyLoss()
 optimizer = optim.Adam(model.parameters(), lr=lr)
 scheduler = torch.optim.lr_scheduler.StepLR(optimizer, step_size=5, gamma=0.5)
 
-# Training
+
 best_test_acc = 0.0
 for epoch in range(epochs):
     model.train()
@@ -48,7 +48,6 @@ for epoch in range(epochs):
     train_loss = running_loss / total
     train_acc = 100 * correct / total
 
-    # Validation
     model.eval()
     test_loss, correct, total = 0.0, 0, 0
     with torch.no_grad():
