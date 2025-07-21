@@ -49,7 +49,7 @@ emoji_map = {
 for k, v in emoji_map.items():
     st.sidebar.markdown(f"{k} : {v}")
 
-st.title("🤟 Real-time ASL Sign Detection (No Mediapipe)")
+st.title("🤟 Real-time ASL Sign Detection")
 st.markdown("Show one ASL sign in the center of your webcam — the app predicts the symbol.")
 
 class ASLTransformer(VideoTransformerBase):
